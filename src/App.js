@@ -3,6 +3,7 @@ import EmployeeForm from "./components/EmployeeForm";
 import EmployeeTable from "./components/EmployeeTable";
 import EditControls from "./components/EmployeeControls";
 import "./App.css";
+import Table from "./components/Table";
 
 function App() {
   const [employees, setEmployees] = useState([]);
@@ -28,8 +29,9 @@ function App() {
         <button className="add-btn" onClick={handleAddRow}>Add Section</button>
         <EditControls editing={editing} handleEdit={handleEdit} handleSave={handleSave} handleCancel={handleCancel} />
       </div>
-      {showInputFields && <EmployeeForm setEmployees={setEmployees} setShowInputFields={setShowInputFields} />}
-      <EmployeeTable employees={employees} editing={editing} editedEmployees={editedEmployees} setEditedEmployees={setEditedEmployees} />
+      {/* {showInputFields && <EmployeeForm setEmployees={setEmployees} setShowInputFields={setShowInputFields} />}
+      <EmployeeTable employees={employees} editing={editing} editedEmployees={editedEmployees} setEditedEmployees={setEditedEmployees} /> */}
+      <Table/>
     </div>
   );
 }
