@@ -1,0 +1,41 @@
+/* Container with fixed width to force horizontal scrolling */
+.table-container {
+  width: 600px; /* Adjust container width as needed */
+  overflow-x: auto;
+}
+
+/* Combined table with a min-width larger than container */
+.combined-table {
+  border-collapse: collapse;
+  min-width: 1000px; /* Force table to be wider than container */
+}
+
+/* Basic table styling */
+.combined-table th,
+.combined-table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+/* Header styling */
+.combined-table th {
+  background-color: #3498db;
+  color: white;
+}
+
+/* First fixed column */
+.fixed-col-1 {
+  position: sticky;
+  left: 0;
+  background-color: #3498db;
+  z-index: 3; /* Higher stacking order to overlay scrolling cells */
+}
+
+/* Second fixed column */
+.fixed-col-2 {
+  position: sticky;
+  left: 150px; /* This value must match the width of the first column */
+  background-color: #3498db;
+  z-index: 3;
+}
